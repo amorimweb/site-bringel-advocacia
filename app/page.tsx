@@ -20,6 +20,8 @@ export default function Page() {
     document.querySelectorAll<HTMLElement>('.areaGrid').forEach((track) => {
       const onWheel = (event: WheelEvent) => {
         if (!media.matches || track.scrollWidth <= track.clientWidth + 2 || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+        const rect = track.getBoundingClientRect();
+        if (rect.top < -24 || rect.bottom > window.innerHeight + 24) return;
         const max = track.scrollWidth - track.clientWidth;
         const movingRight = event.deltaY > 0;
         const canMove = movingRight ? track.scrollLeft < max - 1 : track.scrollLeft > 1;
