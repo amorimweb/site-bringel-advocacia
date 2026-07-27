@@ -1,0 +1,59 @@
+.contact a[href*="wa.me"]:not(.contact-channel)::before,
+footer a[href*="wa.me"]::before,
+a.whatsapp[href*="wa.me"]::before,
+a.whatsapp-float[href*="wa.me"]::before {
+  content: "";
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 1.15em;
+  margin-right: .45em;
+  vertical-align: -.2em;
+  background: url("/whatsapp-icon.png") center / contain no-repeat;
+}
+
+.contact a[href*="instagram.com"]:not(.contact-channel)::before,
+footer a[href*="instagram.com"]::before {
+  content: "";
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 1.15em;
+  margin-right: .45em;
+  vertical-align: -.2em;
+  background: url("/insta-icon.png") center / contain no-repeat;
+}
+
+.contact a[href*="google.com/maps"]:not(.contact-channel)::before,
+.contact a[href*="maps.app.goo.gl"]:not(.contact-channel)::before,
+footer a[href*="google.com/maps"]::before,
+footer a[href*="maps.app.goo.gl"]::before {
+  content: "";
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 1.15em;
+  margin-right: .45em;
+  vertical-align: -.2em;
+  background: url("/maps-icon.png") center / contain no-repeat;
+}
+
+a.wa[href*="wa.me"] {
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+  background-image: url("/whatsapp-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 54%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact a::before,
+  footer a::before,
+  a.whatsapp::before,
+  a.whatsapp-float::before {
+    transition: none;
+  }
+}
+
