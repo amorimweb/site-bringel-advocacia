@@ -9,6 +9,8 @@ const paths: Record<string, ReactElement> = {
   trend: <><polyline points="4,17 9,11 13,14 20,6" /><polyline points="14,6 20,6 20,12" /></>,
   heart: <><path d="M12 20.5s-6.7-4.1-9-7.9C1.2 9.3 2.6 6 6 5.5c2-.3 3.6.8 4.2 2.3C10.8 6.3 12.4 5.2 14.4 5.5c3.4.5 4.8 3.8 3 6.1-2.3 3.8-5.4 7.9-5.4 7.9z" /><line x1="9" y1="12" x2="15" y2="12" /><line x1="12" y1="9" x2="12" y2="15" /></>,
   refresh: <><path d="M4 12a8 8 0 0 1 14-5.3" /><polyline points="18,4 18,7 15,7" /><path d="M20 12a8 8 0 0 1-14 5.3" /><polyline points="6,20 6,17 9,17" /></>,
+  hand: <><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z" /></>,
+  home: <><path d="M4 11l8-7 8 7" /><path d="M6 10v10h12V10" /><path d="M10 20v-6h4v6" /></>,
   check: <><circle cx="12" cy="12" r="9" /><polyline points="8,12.3 10.7,15 16,9.5" /></>,
 };
 
