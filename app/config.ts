@@ -83,8 +83,62 @@ export const site = {
     { tag: 'Aposentadoria', title: 'Como saber se já posso me aposentar? 5 pontos para checar no CNIS', date: '12 set 2026', read: '5 min' }, // PLACEHOLDER
     { tag: 'Incapacidade', title: 'Benefício negado pelo INSS: o que fazer nos primeiros 30 dias', date: '28 ago 2026', read: '4 min' },
     { tag: 'Planejamento', title: 'Planejamento previdenciário: por que começar antes dos 50', date: '05 ago 2026', read: '6 min' },
+    { tag: 'Pensão', title: 'Pensão por morte: quem tem direito e quais documentos reunir', date: '20 jul 2026', read: '5 min' }, // PLACEHOLDER
+    { tag: 'BPC', title: 'BPC/LOAS: como o INSS avalia a renda da família', date: '02 jul 2026', read: '4 min' }, // PLACEHOLDER
+    { tag: 'Revisão', title: 'Revisão de benefício: quando vale a pena pedir uma análise', date: '18 jun 2026', read: '5 min' }, // PLACEHOLDER
   ],
 
+  // "Qual é o seu caso?" — referência: triagem por situação (sites previdenciários) + lista do que reunir.
+  cases: [
+    {
+      label: 'Quero me aposentar',
+      title: 'Vamos ver se já chegou a hora.',
+      text: 'A aposentadoria depende de idade, tempo de contribuição e da regra que se aplica ao seu histórico. O ponto de partida é o CNIS.',
+      docs: ['Documento com foto e CPF', 'CNIS (extrato do Meu INSS)', 'Carteira de trabalho, todas as que tiver', 'Carnês ou guias de contribuição', 'Comprovantes de trabalho rural ou em condições especiais, se houver'],
+      msg: 'Quero saber se já posso me aposentar.',
+    },
+    {
+      label: 'Estou doente ou me acidentei',
+      title: 'Saúde em primeiro lugar, o INSS em seguida.',
+      text: 'Quando a saúde impede o trabalho, os laudos e o histórico médico contam tanto quanto as contribuições.',
+      docs: ['Documento com foto e CPF', 'Laudos, atestados e exames recentes', 'Receitas e relatórios do médico', 'Comunicações e resultado de perícia do INSS', 'CNIS ou carteira de trabalho'],
+      msg: 'Estou afastado(a) por problema de saúde e preciso de orientação sobre benefício por incapacidade.',
+    },
+    {
+      label: 'O INSS negou meu pedido',
+      title: 'Negar não é a palavra final.',
+      text: 'Existem caminhos administrativos e judiciais, cada um com prazos próprios. Quanto antes a decisão for analisada, mais opções você tem.',
+      docs: ['Carta de indeferimento ou print do resultado', 'Número do protocolo do pedido', 'Documentos que você já apresentou', 'CNIS e documento com foto'],
+      msg: 'O INSS negou meu pedido e gostaria de entender o que fazer.',
+    },
+    {
+      label: 'Perdi alguém da família',
+      title: 'Sem pressa para conversar, com atenção aos prazos.',
+      text: 'A pensão por morte tem regras sobre quem é dependente e sobre a data do pedido. Conduzimos cada etapa com cuidado.',
+      docs: ['Certidão de óbito', 'Documentos pessoais do falecido e dos dependentes', 'Certidão de casamento, união estável ou nascimento', 'CNIS ou últimos vínculos de trabalho do falecido'],
+      msg: 'Perdi um familiar e preciso de orientação sobre pensão por morte.',
+    },
+    {
+      label: 'Idoso ou pessoa com deficiência (BPC)',
+      title: 'Um benefício assistencial, com critérios próprios.',
+      text: 'O BPC/LOAS considera a renda da família e, quando for o caso, a avaliação da deficiência. Cada detalhe do cadastro pesa.',
+      docs: ['Documentos pessoais de todos que moram na casa', 'Comprovante de endereço', 'CadÚnico atualizado', 'Laudos médicos, no caso de deficiência'],
+      msg: 'Gostaria de orientação sobre o BPC/LOAS.',
+    },
+    {
+      label: 'Meu benefício parece baixo',
+      title: 'Às vezes o valor merece uma segunda leitura.',
+      text: 'Em certos casos, períodos de trabalho ou salários deixam de ser considerados. Uma revisão começa comparando o cálculo com o histórico.',
+      docs: ['Carta de concessão do benefício', 'Extrato de pagamento recente', 'CNIS', 'Carteira de trabalho e comprovantes de salário, se tiver'],
+      msg: 'Gostaria de uma análise do valor do meu benefício.',
+    },
+  ],
+
+  scam: [
+    'Combine tudo pelo WhatsApp e pelo e-mail que estão nesta página.',
+    'Desconfie de quem pede a senha do seu Meu INSS ou promete “liberar” benefício mediante pagamento antecipado.',
+    'Em caso de dúvida, pergunte antes. Respondemos com prazer.',
+  ],
 
   faq: [
     ['Como funciona o primeiro contato com o escritório?', 'O atendimento começa com uma breve explicação da sua situação previdenciária, para organizarmos a análise do caso com mais detalhes.'],
@@ -92,5 +146,9 @@ export const site = {
     ['O escritório atende apenas aposentadoria?', 'Não. Além de aposentadorias, a atuação inclui benefícios por incapacidade, BPC/LOAS, pensão por morte, planejamento e revisão de benefícios.'],
     ['É possível revisar um benefício já concedido?', 'Em determinadas situações, sim. A análise do histórico contributivo pode indicar se há espaço para revisão.'],
     ['Atendem pessoas de outras cidades?', 'Sim. Parte do atendimento pode ser feita online, por videochamada e WhatsApp, com envio digital de documentos.'],
+    ['Preciso ter todos os documentos no primeiro contato?', 'Não. Para começar, basta contar sua situação. Indicamos o que reunir ao longo da conversa, e a seção “Qual é o seu caso?” serve de guia.'],
+    ['Meu pedido foi negado. Ainda há o que fazer?', 'Muitas vezes, sim. Há recursos administrativos e a via judicial, cada um com prazos próprios. Por isso vale nos procurar logo, com a carta de indeferimento em mãos.'],
+    ['Como são combinados os honorários?', 'Antes de começar, explicamos como funciona a contratação e quais custos estão envolvidos. Nada é combinado sem que você entenda cada ponto.'],
+    ['Quanto tempo demora um processo?', 'Depende do benefício, do caminho escolhido e da fila do INSS. Não prometemos prazos que não controlamos; em cada etapa dizemos o que esperar.'],
   ] as [string, string][],
 };
